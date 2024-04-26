@@ -4,10 +4,12 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PackageFeatureController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// })->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -15,7 +17,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
-})->middleware(['auth', 'verified', 'isAdmin'])->name('admin.dashboard');
+})->middleware(['auth', 'isAdmin'])->name('admin.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
