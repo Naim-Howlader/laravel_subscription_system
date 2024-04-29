@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->boolean('package_status')->default(0);
+            $table->unsignedBigInteger('package_id')->nullable();
+            $table->string('starting_date')->nullable();
+            $table->string('ending_date')->nullable();
+            $table->foreign('package_id')->references('id')->on('packages');
             $table->string('userType')->default('user');
             $table->string('password');
             $table->rememberToken();

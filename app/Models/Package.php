@@ -18,4 +18,5 @@ class Package extends Model
     {
         return $this->belongsToMany(Feature::class);
     }
+
 }

@@ -64,3 +64,32 @@
     padding: 10px 20px;
   }
 }
+
+
+@keyframes shadow-pulse-green {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 255, 0, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+    }
+  }
+
+  .shadow-green-neon {
+    animation: shadow-pulse-green 1.5s infinite alternate;
+  }
+
+
+  @keyframes shadow-pulse-red {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    }
+  }
+
+  .shadow-red-neon {
+    animation: shadow-pulse-red 1.5s infinite alternate;
+  }
+
