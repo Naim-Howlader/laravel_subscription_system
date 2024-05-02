@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -63,4 +63,45 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
+
+
+
+
+# Laravel Subscription System
+A subscription application allowing administrators to create and manage various subscription packages from the admin panel. Users have access to these packages and can subscribe accordingly. Upon reaching the specified subscription period, users will be automatically unsubscribed from the current package and become eligible for either previous or newly available packages. 
+
+
+
+## Features
+
+- Admin Dashboard
+- User Dashboard
+- Email Notification
+- Package Subscription
+- Automatic Unsubscription After Specified Time
+
+
+## Scenarios 1
+
+Notifications will be sent to users via email upon subscription or unsubscription from a package.
+## Scenarios 2
+
+Guest users are unable to subscribe to any packages. Each registered user can hold only one package subscription at a time. Once a user subscribes to a package, they cannot subscribe to another until the subscription period for the current package expires.
+
+
+## Tech Stack
+
+**Client:** Html, Css, TailwindCSS, Javascript
+
+**Server:** Laravel
+
+**Concept:** Event & Listener, Mail, Jobs, Queue, Cron Job
+
+**UI Library:** Sweet Alert 2
+
+
+## Authors
+
+- [@Naim Howlader](https://github.com/Naim-Howlader)
+
