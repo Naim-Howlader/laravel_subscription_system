@@ -21,8 +21,8 @@ class SubscribeController extends Controller
                     'starting_date' => date('d/m/Y'),
                     'ending_date' => date('d/m/Y',strtotime('+1 month')),
                 ]);
-                // $subscribed = new Subscribed($user,$package);
-                // event($subscribed);
+                $subscribed = new Subscribed($user);
+                event($subscribed);
                 return redirect()->route('home')->with('success', 'Subscription Successfull');
             }else{
                 return redirect()->route('home')->with('error', 'You have already subscribed a package');

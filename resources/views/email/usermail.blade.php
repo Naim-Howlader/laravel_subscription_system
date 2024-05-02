@@ -12,13 +12,13 @@
         $endingDate = date('d/m/Y', strtotime('+1 month'));
     @endphp
     <h2>Dear {{ $event->user->name }},</h2>
-  <p>We are thrilled to confirm that your subscription to our <strong>{{ $event->package->title }}</strong> internet package has been successfully activated!</p>
+  <p>We are thrilled to confirm that your subscription to our <strong>{{ $event->user->packages->title }}</strong> internet package has been successfully activated!</p>
   <p>Here are the details of your subscription:</p>
   <ul>
-    <li><strong>Package Name:</strong> {{ $event->package->title }}</li>
-    <li><strong>Speed:</strong> {{ $event->package->mbps }} Mbps</li>
+    <li><strong>Package Name:</strong> {{ $event->user->packages->title }}</li>
+    <li><strong>Speed:</strong> {{ $event->user->packages->mbps }} Mbps</li>
     <li><strong>Validity:</strong> 1 Month</li>
-    <li><strong>Cost:</strong> {{ $event->package->price }}</li>
+    <li><strong>Cost:</strong> {{ $event->user->packages->price }}</li>
     <li><strong>Starting Date:</strong> {{ $startingDate }}</li>
     <li><strong>Ending Date:</strong> {{ $endingDate }}</li>
   </ul>
